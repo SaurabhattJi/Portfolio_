@@ -7,13 +7,13 @@ import { AiOutlineCloudDownload } from "react-icons/ai";
 import { FaPlay } from "react-icons/fa";
 
 const Skills = () => {
-    const audioRef = useRef(null);
+    // const audioRef = useRef(null);
 
-    const handlePlayAudio = () => {
-        if (audioRef.current) {
-            audioRef.current.play();
-        }
-    };
+    // const handlePlayAudio = () => {
+    //     if (audioRef.current) {
+    //         audioRef.current.play();
+    //     }
+    // };
 
     return (
         <Section
@@ -49,19 +49,19 @@ const Skills = () => {
                         icon={<AiOutlineCloudDownload />}
                     />
 
-                    <button
+                    {/* <button
                         className="audio-play-btn"
                         onClick={handlePlayAudio}
                     >
                         <FaPlay style={{ marginRight: "8px" }} />
                         Play Intro
-                    </button>
+                    </button> */}
 
-                    <audio
+                    {/* <audio
                         ref={audioRef}
                         src="/audio/achievement-unlocked-361842.mp3"
                         preload="auto"
-                    />
+                    /> */}
                 </div>
             </div>
         </Section>
