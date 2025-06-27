@@ -27,4 +27,21 @@
             margin-bottom: 15px;
         }
     }
+    .audio-play-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+            background-color: #eeeeee;
+        }
+    }
 }

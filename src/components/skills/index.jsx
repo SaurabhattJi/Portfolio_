@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import Section from "../shared/section";
 import "./style.scss";
 import Skill from "../../images/tech-icons.png";
 import CallToAction from "../shared/CallToAction";
 import { AiOutlineCloudDownload } from "react-icons/ai";
+import { FaPlay } from "react-icons/fa";
 
 const Skills = () => {
+    const audioRef = useRef(null);
+
+    const handlePlayAudio = () => {
+        if (audioRef.current) {
+            audioRef.current.play();
+        }
+    };
+
     return (
         <Section
             background="dark"
@@ -34,9 +43,24 @@ const Skills = () => {
                         Familiarity with Node.js, Express.js, Ejs, MongoDB,
                         Mongoose, jQuery, Material UI, Redux and Tailwind CSS.
                     </p>
+
                     <CallToAction
                         text="Download CV"
                         icon={<AiOutlineCloudDownload />}
+                    />
+
+                    <button
+                        className="audio-play-btn"
+                        onClick={handlePlayAudio}
+                    >
+                        <FaPlay style={{ marginRight: "8px" }} />
+                        Play Intro
+                    </button>
+
+                    <audio
+                        ref={audioRef}
+                        src="/audio/achievement-unlocked-361842.mp3"
+                        preload="auto"
                     />
                 </div>
             </div>
